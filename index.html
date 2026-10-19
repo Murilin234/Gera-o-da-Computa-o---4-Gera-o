@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4ª Geração da Computação: A Era dos Microprocessadores</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            retro: {
+              bg: '#0B0F19',
+              card: '#111827',
+              border: '#1F2937',
+              cyan: '#06B6D4',
+              amber: '#F59E0B',
+              purple: '#8B5CF6'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0B0F19] text-gray-200 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Header & Menu de Navegação -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-black font-mono shadow-lg shadow-cyan-500/20">
+            4G
+          </div>
+          <span class="font-bold text-lg tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-amber-400 font-mono">
+            COMPUTAÇÃO
+          </span>
+        </div>
+
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="#inicio" class="hover:text-cyan-400 transition-colors">Início</a>
+          <a href="#contexto" class="hover:text-cyan-400 transition-colors">Contexto</a>
+          <a href="#caracteristicas" class="hover:text-cyan-400 transition-colors">Características</a>
+          <a href="#computadores" class="hover:text-cyan-400 transition-colors">Equipamentos</a>
+          <a href="#personagens" class="hover:text-cyan-400 transition-colors">Pioneiros</a>
+          <a href="#software" class="hover:text-cyan-400 transition-colors">Software</a>
+          <a href="#evolucao" class="hover:text-cyan-400 transition-colors">Evolução</a>
+          <a href="#curiosidades" class="hover:text-cyan-400 transition-colors">Curiosidades</a>
+          <a href="#quiz" class="text-amber-400 hover:text-amber-300 font-bold transition-colors"><i class="fas fa-gamepad mr-1"></i> Quiz</a>
+        </nav>
+
+        <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white p-2" aria-label="Menu Mobile">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#111827] border-b border-gray-800 px-4 pt-2 pb-4 space-y-2">
+      <a href="#inicio" class="block px-3 py-2 rounded-md hover:bg-gray-800 text-cyan-400">Início</a>
+      <a href="#contexto" class="block px-3 py-2 rounded-md hover:bg-gray-800">Contexto Histórico</a>
+      <a href="#caracteristicas" class="block px-3 py-2 rounded-md hover:bg-gray-800">Características</a>
+      <a href="#computadores" class="block px-3 py-2 rounded-md hover:bg-gray-800">Computadores & Tecnologias</a>
+      <a href="#personagens" class="block px-3 py-2 rounded-md hover:bg-gray-800">Personagens Importantes</a>
+      <a href="#software" class="block px-3 py-2 rounded-md hover:bg-gray-800">Linguagens & Software</a>
+      <a href="#evolucao" class="block px-3 py-2 rounded-md hover:bg-gray-800">Evolução Tecnológica</a>
+      <a href="#curiosidades" class="block px-3 py-2 rounded-md hover:bg-gray-800">Curiosidades</a>
+      <a href="#quiz" class="block px-3 py-2 rounded-md hover:bg-gray-800 text-amber-400 font-bold">Quiz Interativo</a>
+    </div>
+  </header>
+
+  <!-- 1. PÁGINA INICIAL / HERO -->
+  <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-mono mb-6">
+          <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span>Trabalho Acadêmico de História da Computação</span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6">
+          QUARTA GERAÇÃO DA <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-amber-400">COMPUTAÇÃO</span>
+        </h1>
+        <p class="text-xl text-amber-400 font-mono mb-4 font-semibold">1971 a 1981+ (A Era do Microprocessador)</p>
+        <p class="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
+          Uma revolução marcada pelo nascimento do circuito integrado VLSI (Very Large Scale Integration), compactando milhares de transistores num único chip de silício. Bem-vindo à era em que os computadores deixaram as salas corporativas e conquistaram os lares e escritórios do mundo.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#contexto" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black font-bold font-mono transition-all duration-300 shadow-lg shadow-cyan-500/25 flex items-center gap-2">
+            Explorar História <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+          <a href="#quiz" class="px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 font-mono transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-trophy text-amber-400"></i> Testar Conhecimento
+          </a>
+        </div>
+      </div>
+
+      <!-- Card Identificação da Equipe/Trabalho -->
+      <div class="mt-16 bg-gradient-to-r from-gray-900 via-gray-900/90 to-gray-900 p-6 rounded-2xl border border-gray-800 shadow-2xl max-w-2xl mx-auto font-mono text-sm">
+        <div class="flex items-center justify-between border-b border-gray-800 pb-3 mb-4">
+          <span class="text-xs text-cyan-400 uppercase tracking-widest"><i class="fas fa-info-circle mr-1"></i> Ficha Técnica do Projeto</span>
+          <span class="text-xs text-gray-500">Seminário Web</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div>
+            <span class="text-gray-500 block">Tema:</span>
+            <span class="text-white font-semibold">Gerações da Computação</span>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Foco de Pesquisa:</span>
+            <span class="text-cyan-300 font-semibold">4ª Geração (Microprocessadores)</span>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Inovação Chave:</span>
+            <span class="text-amber-400 font-semibold">Tecnologia LSI e VLSI</span>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Período Histórico:</span>
+            <span class="text-purple-400 font-semibold">Década de 1970 - 1980</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. CONTEXTO HISTÓRICO -->
+  <section id="contexto" class="py-20 bg-gray-950 border-t border-gray-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">02. Panorama Mundial</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Contexto Histórico</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">O cenário social, econômico e geopolítico que impulsionou a miniaturização eletrônica.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 text-gray-300 leading-relaxed text-sm sm:text-base">
+          <p>
+            A transição para a Quarta Geração ocorre no início da década de 1970, em um momento geopolítico de intensa competição durante a **Guerra Fria** e corrida espacial. As demandas de agências aeroespaciais (como a NASA) e militares por sistemas de navegação cada vez menores e leves aceleraram drasticamente o desenvolvimento da microeletrônica.
+          </p>
+          <p>
+            Ao mesmo tempo, ocorria a **Crise do Petróleo (1973)**, impulsionando a busca por eficiência e redução do consumo energético nas indústrias. Paralelamente, no estado da Califórnia (EUA), nascia o lendário **Vale do Silício** (*Silicon Valley*), onde startups e engenheiros visionários desafiavam as grandes corporações estabelecidas.
+          </p>
+          <div class="p-4 rounded-xl bg-cyan-950/30 border border-cyan-800/50 text-cyan-200">
+            <h4 class="font-bold text-cyan-400 mb-1 font-mono text-sm"><i class="fas fa-lightbulb mr-2"></i>A Ruptura do Modelo Tradicional</h4>
+            Até o final dos anos 60, ter um computador exigia orçamentos milionários, salas inteiras climatizadas e equipes de técnicos especializados. A 4ª geração transformou a computação de um recurso industrial/militar em um **bem pessoal e doméstico**.
+          </div>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 shadow-xl">
+          <h4 class="text-amber-400 font-mono font-bold text-lg mb-6 flex items-center">
+            <i class="fas fa-clock mr-2"></i> Linha do Tempo da 4ª Geração
+          </h4>
+          <div class="space-y-6 border-l-2 border-gray-800 pl-6 relative font-mono text-xs sm:text-sm">
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-cyan-400 group-hover:scale-150 transition-transform"></div>
+              <span class="text-cyan-400 font-bold">1971</span>
+              <p class="text-white font-semibold">Lançamento do Intel 4004</p>
+              <p class="text-gray-400">Primeiro microprocessador comercial do mundo em um único chip.</p>
+            </div>
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-purple-400 group-hover:scale-150 transition-transform"></div>
+              <span class="text-purple-400 font-bold">1975</span>
+              <p class="text-white font-semibold">Altair 8800</p>
+              <p class="text-gray-400">Capa da revista Popular Electronics, iniciando a era do computador pessoal.</p>
+            </div>
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-amber-400 group-hover:scale-150 transition-transform"></div>
+              <span class="text-amber-400 font-bold">1977</span>
+              <p class="text-white font-semibold">Trindade do Computador Pessoal</p>
+              <p class="text-gray-400">Lançamentos do Apple II, TRS-80 e Commodore PET.</p>
+            </div>
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-green-400 group-hover:scale-150 transition-transform"></div>
+              <span class="text-green-400 font-bold">1981</span>
+              <p class="text-white font-semibold">Lançamento do IBM PC</p>
+              <p class="text-gray-400">Padronização da arquitetura aberta e consagração no mercado corporativo.</p>
+            </div>
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-pink-400 group-hover:scale-150 transition-transform"></div>
+              <span class="text-pink-400 font-bold">1984</span>
+              <p class="text-white font-semibold">Chegada do Apple Macintosh</p>
+              <p class="text-gray-400">Popularização definitiva da Interface Gráfica (GUI) e do Mouse.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PRINCIPAIS CARACTERÍSTICAS -->
+  <section id="caracteristicas" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">03. Inovações TÉCNICAS</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Principais Características</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">O salto tecnológico que possibilitou a revolução do silício.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">LSI e VLSI</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Evolução de centenas para dezenas de milhares (e depois milhões) de transistores num único milímetro quadrado de pastilha de silício.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-amber-500/50 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-950 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-compress-alt"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Miniaturização Extrema</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Equipamentos que antes ocupavam galpões foram reduzidos ao tamanho de uma caixa que podia ser colocada em cima de qualquer mesa de trabalho.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-purple-950 text-purple-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Interface Gráfica (GUI)</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            A substituição das linhas de comando complexas por janelas, ícones, menus e ponteiros acionados por mouse, facilitando a usabilidade.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-green-500/50 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-green-950 text-green-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Redução Drástica de Custos</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            A produção em massa de microchips permitiu baratear o custo final do equipamento, tornando-o acessível a pequenas empresas e famílias.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-pink-950 text-pink-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Baixo Consumo & Velocidade</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Redução gigantesca na dissipação de calor e consumo elétrico, atingindo velocidades de processamento medidas em Megahertz (MHz).
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-blue-950 text-blue-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Surgimento de Redes Locais</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Início do compartilhamento de dados e periféricos através de tecnologias como Ethernet e os primórdios das redes de comunicação.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. COMPUTADORES E TECNOLOGIAS -->
+  <section id="computadores" class="py-20 bg-gray-950 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">04. Hardware Emblemático</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Computadores e Dispositivos Icônicos</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">Clique nos cards abaixo para visualizar os detalhes técnicos de cada equipamento.</p>
+
+        <!-- Filtros Interativos da Galeria -->
+        <div class="flex flex-wrap justify-center gap-2 mt-6 font-mono text-xs">
+          <button class="filter-btn active px-4 py-2 rounded-full bg-cyan-500 text-black font-bold" data-filter="all">Todos</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="pc">Computadores</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700" data-filter="periferico">Periféricos & Dispositivos</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="equipamentos-grid">
+        
+        <!-- Equipamento 1 -->
+        <div class="equip-card pc bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all cursor-pointer group" onclick="openModal('altair')">
+          <div class="h-48 overflow-hidden relative bg-gray-800">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Altair 8800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-xs font-mono text-cyan-400 border border-cyan-500/30">1975</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-white mb-1">Altair 8800</h4>
+            <p class="text-xs text-amber-400 font-mono mb-3">MITS • Processador Intel 8080</p>
+            <p class="text-gray-400 text-sm line-clamp-2">Considerado o faísca do mercado de PCs. Vendido em kits para montar, não possuía teclado nem monitor inicialmente.</p>
+            <div class="mt-4 flex justify-between items-center text-xs font-mono text-cyan-400">
+              <span>Ver ficha técnica</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipamento 2 -->
+        <div class="equip-card pc bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all cursor-pointer group" onclick="openModal('apple2')">
+          <div class="h-48 overflow-hidden relative bg-gray-800">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Apple II" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-xs font-mono text-cyan-400 border border-cyan-500/30">1977</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-white mb-1">Apple II</h4>
+            <p class="text-xs text-amber-400 font-mono mb-3">Apple Computer • MOS 6502</p>
+            <p class="text-gray-400 text-sm line-clamp-2">Um marco de design industrial. Vinha pronto para usar, com gabinete plástico, gráficos coloridos e som.</p>
+            <div class="mt-4 flex justify-between items-center text-xs font-mono text-cyan-400">
+              <span>Ver ficha técnica</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipamento 3 -->
+        <div class="equip-card pc bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all cursor-pointer group" onclick="openModal('ibmpc')">
+          <div class="h-48 overflow-hidden relative bg-gray-800">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="IBM PC 5150" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-xs font-mono text-cyan-400 border border-cyan-500/30">1981</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-white mb-1">IBM PC (Modelo 5150)</h4>
+            <p class="text-xs text-amber-400 font-mono mb-3">IBM • Intel 8088</p>
+            <p class="text-gray-400 text-sm line-clamp-2">Padronizou a indústria dos computadores pessoais com arquitetura aberta, estabelecendo o padrão "IBM Compatível".</p>
+            <div class="mt-4 flex justify-between items-center text-xs font-mono text-cyan-400">
+              <span>Ver ficha técnica</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipamento 4 -->
+        <div class="equip-card pc bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all cursor-pointer group" onclick="openModal('macintosh')">
+          <div class="h-48 overflow-hidden relative bg-gray-800">
+            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=600&q=80" alt="Macintosh 128k" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-xs font-mono text-cyan-400 border border-cyan-500/30">1984</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-white mb-1">Apple Macintosh</h4>
+            <p class="text-xs text-amber-400 font-mono mb-3">Apple • Motorola 68000</p>
+            <p class="text-gray-400 text-sm line-clamp-2">Popularizou a Interface Gráfica do Usuário (GUI) e o mouse para o público de massa de forma intuitiva.</p>
+            <div class="mt-4 flex justify-between items-center text-xs font-mono text-cyan-400">
+              <span>Ver ficha técnica</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipamento 5 -->
+        <div class="equip-card periferico bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all cursor-pointer group" onclick="openModal('mouse')">
+          <div class="h-48 overflow-hidden relative bg-gray-800">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80" alt="Mouse da Xerox / Apple" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-xs font-mono text-cyan-400 border border-cyan-500/30">década de 70/80</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-white mb-1">O Mouse e Telas WIMP</h4>
+            <p class="text-xs text-amber-400 font-mono mb-3">Xerox PARC / Comercializado pela Apple</p>
+            <p class="text-gray-400 text-sm line-clamp-2">Mudou drasticamente a forma como os humanos interagiam com as máquinas, aposentando os comandos em texto puro.</p>
+            <div class="mt-4 flex justify-between items-center text-xs font-mono text-cyan-400">
+              <span>Ver ficha técnica</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipamento 6 -->
+        <div class="equip-card periferico bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all cursor-pointer group" onclick="openModal('floppy')">
+          <div class="h-48 overflow-hidden relative bg-gray-800">
+            <img src="https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=600&q=80" alt="Disquete Flexible" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-xs font-mono text-cyan-400 border border-cyan-500/30">5.25" / 3.5"</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-white mb-1">Disquetes (Floppy Disks)</h4>
+            <p class="text-xs text-amber-400 font-mono mb-3">IBM / Shugart Associates</p>
+            <p class="text-gray-400 text-sm line-clamp-2">O padrão definitivo de armazenamento removível para transportar programas, jogos e arquivos no período.</p>
+            <div class="mt-4 flex justify-between items-center text-xs font-mono text-cyan-400">
+              <span>Ver ficha técnica</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DE DETALHES DE EQUIPAMENTOS -->
+  <div id="tech-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-gray-900 border border-cyan-500/40 rounded-2xl max-w-xl w-full p-6 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <div id="modal-content">
+        <!-- Preenchido via JS -->
+      </div>
+    </div>
+  </div>
+
+<!-- 5. PERSONAGENS IMPORTANTES -->
+  <section id="personagens" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">05. Mentes Brilhantes</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Personagens Importantes</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">Engenheiros, cientistas e empresários que transformaram visões em realidade.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Personagem 1: Ted Hoff -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 text-center hover:border-cyan-500/40 transition-all">
+          <div class="w-24 h-24 mx-auto rounded-full bg-cyan-950 border-2 border-cyan-500 overflow-hidden mb-4 shadow-lg shadow-cyan-500/20">
+            <img src="Marcian_Ted_Hoff_(cropped).jpg" alt="Ted Hoff" class="w-full h-full object-cover object-top">
+          </div>
+          <h4 class="text-lg font-bold text-white">Ted Hoff</h4>
+          <p class="text-xs text-cyan-400 font-mono mb-2">Engenheiro da Intel</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Co-inventor do <strong>Intel 4004</strong>, teve a ideia crucial de criar uma CPU genérica programável em vez de circuitos customizados.
+          </p>
+        </div>
+
+        <!-- Personagem 2: Steve Wozniak -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 text-center hover:border-amber-500/40 transition-all">
+          <div class="w-24 h-24 mx-auto rounded-full bg-amber-950 border-2 border-amber-500 overflow-hidden mb-4 shadow-lg shadow-amber-500/20">
+            <img src="Steve_Wozniak_by_Gage_Skidmore.jpg" alt="Steve Wozniak" class="w-full h-full object-cover object-center">
+          </div>
+          <h4 class="text-lg font-bold text-white">Steve Wozniak</h4>
+          <p class="text-xs text-amber-400 font-mono mb-2">Co-fundador da Apple</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Gênio do hardware que projetou sozinho os circuitos do Apple I e Apple II, priorizando simplicidade e eficiência elegância.
+          </p>
+        </div>
+
+        <!-- Personagem 3: Bill Gates -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 text-center hover:border-purple-500/40 transition-all">
+          <div class="w-24 h-24 mx-auto rounded-full bg-purple-950 border-2 border-purple-500 overflow-hidden mb-4 shadow-lg shadow-purple-500/20">
+            <img src="Bill_Gates_at_the_European_Commission_-_2025_-_P067383-987995_(cropped).jpg" alt="Bill Gates" class="w-full h-full object-cover object-center">
+          </div>
+          <h4 class="text-lg font-bold text-white">Bill Gates</h4>
+          <p class="text-xs text-purple-400 font-mono mb-2">Co-fundador da Microsoft</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Pioneiro no licenciamento de software. Desenvolveu o Altair BASIC e negociou o MS-DOS com a IBM, dominando o mercado de SOs.
+          </p>
+        </div>
+
+        <!-- Personagem 4: Alan Kay -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 text-center hover:border-green-500/40 transition-all">
+          <div class="w-24 h-24 mx-auto rounded-full bg-green-950 border-2 border-green-500 overflow-hidden mb-4 shadow-lg shadow-green-500/20">
+            <img src="ratio3x4_1920.jpg" alt="Alan Kay" class="w-full h-full object-cover object-center">
+          </div>
+          <h4 class="text-lg font-bold text-white">Alan Kay</h4>
+          <p class="text-xs text-green-400 font-mono mb-2">Cientista da Xerox PARC</p>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Idealizou o conceito do "Dynabook" (antecessor do laptop/tablet) e ajudou a conceber a programação orientada a objetos (Smalltalk).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 6. LINGUAGENS E SOFTWARES -->
+  <section id="software" class="py-20 bg-gray-950 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">06. A Era dos Programas</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Linguagens de Programação & Software</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">Quando o software se tornou uma indústria bilionária independente do hardware.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Abas do Tópico -->
+        <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+          <div class="flex space-x-4 border-b border-gray-800 pb-4 mb-6 font-mono text-sm">
+            <button id="tab-lang-btn" class="text-cyan-400 border-b-2 border-cyan-400 pb-2 font-bold focus:outline-none" onclick="switchTab('lang')">Linguagens Chave</button>
+            <button id="tab-so-btn" class="text-gray-400 hover:text-white pb-2 font-bold focus:outline-none" onclick="switchTab('so')">Sistemas & Aplicativos</button>
+          </div>
+
+          <!-- Conteúdo Tab 1: Linguagens -->
+          <div id="tab-lang" class="space-y-4 font-mono text-xs sm:text-sm">
+            <div class="p-3 rounded-lg bg-gray-800/60 border border-gray-700">
+              <span class="text-amber-400 font-bold block mb-1">Linguagem C (1972)</span>
+              <p class="text-gray-300">Desenvolvida por Dennis Ritchie nos laboratórios Bell. Permitiu a reescrita do Unix com alta performance e portabilidade. Base de toda a programação moderna.</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-800/60 border border-gray-700">
+              <span class="text-cyan-400 font-bold block mb-1">BASIC (Popularizado nos PCs)</span>
+              <p class="text-gray-300">Linguagem simples que permitia a milhares de entusiastas e crianças aprenderem a programar diretamente em seus microcomputadores.</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-800/60 border border-gray-700">
+              <span class="text-purple-400 font-bold block mb-1">Pascal & C++ (1970s/1983)</span>
+              <p class="text-gray-300">Pascal introduziu conceitos rígidos de estruturação de código; C++ trouxe a orientação a objetos de alta velocidade.</p>
+            </div>
+          </div>
+
+          <!-- Conteúdo Tab 2: Sistemas (Oculto por padrão) -->
+          <div id="tab-so" class="space-y-4 font-mono text-xs sm:text-sm hidden">
+            <div class="p-3 rounded-lg bg-gray-800/60 border border-gray-700">
+              <span class="text-green-400 font-bold block mb-1">MS-DOS / CP/M</span>
+              <p class="text-gray-300">Sistemas operacionais em linha de comando que gerenciavam os discos rígidos, disquetes e memória do IBM PC e concorrentes.</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-800/60 border border-gray-700">
+              <span class="text-pink-400 font-bold block mb-1">VisiCalc & Lotus 1-2-3</span>
+              <p class="text-gray-300">As primeiras planilhas eletrônicas. Foram chamadas de "Killer Apps", pois convenceram empresas a adquirir computadores pessoais.</p>
+            </div>
+            <div class="p-3 rounded-lg bg-gray-800/60 border border-gray-700">
+              <span class="text-blue-400 font-bold block mb-1">WordStar</span>
+              <p class="text-gray-300">Um dos primeiros processadores de texto comercialmente populares, aposentando as máquinas de escrever tradicionais.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Demonstrativo -->
+        <div class="bg-black rounded-2xl border border-cyan-500/30 p-4 font-mono text-xs overflow-hidden shadow-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-2 border-b border-gray-800 pb-3 mb-3 text-gray-500">
+              <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+              <span class="ml-2 text-gray-400">MS-DOS Prompt (Simulador C-Basic)</span>
+            </div>
+            <div class="text-green-400 space-y-2 leading-relaxed">
+              <p>C:\> BASIC.EXE</p>
+              <p class="text-gray-400">MS-BASIC v1.0 (C) 1978 Microsoft Corp.</p>
+              <p>10 PRINT "BEM-VINDO A 4A GERACAO DE COMPUTADORES!"</p>
+              <p>20 LET CHIP = "INTEL 8088"</p>
+              <p>30 GOTO 10</p>
+              <p class="text-yellow-400">RUN</p>
+              <p class="text-cyan-300 animate-pulse">BEM-VINDO A 4A GERACAO DE COMPUTADORES!</p>
+              <p class="text-cyan-300">BEM-VINDO A 4A GERACAO DE COMPUTADORES!</p>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-gray-900 text-gray-500 flex justify-between items-center">
+            <span>Memória Livre: 64 KB RAM</span>
+            <span class="text-cyan-400"><i class="fas fa-terminal mr-1"></i> 8-Bit Executable</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. EVOLUÇÃO TECNOLÓGICA (COMPARATIVO) -->
+  <section id="evolucao" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">07. Comparativo de Ers</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Evolução Tecnológica</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">Veja como a 4ª Geração superou a 3ª e abriu caminho para a era atual.</p>
+      </div>
+
+      <!-- Tabela Comparativa Responsiva -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left font-mono text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-800 text-gray-400">
+              <th class="p-4 bg-gray-900/50">Atributo</th>
+              <th class="p-4 bg-gray-900/50 text-purple-400">3ª Geração (1964-1971)</th>
+              <th class="p-4 bg-cyan-950/40 text-cyan-400 border-x border-cyan-500/30">4ª Geração (1971-1981+)</th>
+              <th class="p-4 bg-gray-900/50 text-amber-400">Contribuição p/ Gerações Seguintes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800 text-gray-300">
+            <tr>
+              <td class="p-4 font-bold text-white">Componente Central</td>
+              <td class="p-4">Circuitos Integrados (SSI / MSI)</td>
+              <td class="p-4 bg-cyan-950/20 font-bold text-cyan-300 border-x border-cyan-500/20">Microprocessadores (LSI / VLSI)</td>
+              <td class="p-4">Bases para chips multicore atuais</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-white">Tamanho Físico</td>
+              <td class="p-4">Armários médios e grandes gabinetes</td>
+              <td class="p-4 bg-cyan-950/20 font-bold text-cyan-300 border-x border-cyan-500/20">Desktops compactos (Computador de mesa)</td>
+              <td class="p-4">Laptops, Smartphones e Wearables</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-white">Interface</td>
+              <td class="p-4">Cartões perfurados e monitores de texto</td>
+              <td class="p-4 bg-cyan-950/20 font-bold text-cyan-300 border-x border-cyan-500/20">Interfaces Gráficas (GUI) + Mouse</td>
+              <td class="p-4">Telas Touchscreen e GUIs modernas</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-white">Público-Alvo</td>
+              <td class="p-4">Empresas e Universidades</td>
+              <td class="p-4 bg-cyan-950/20 font-bold text-cyan-300 border-x border-cyan-500/20">Usuários Comuns e Domésticos</td>
+              <td class="p-4">Inclusão digital e conectividade global</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-white">Armazenamento</td>
+              <td class="p-4">Fitas magnéticas e discos rígidos imensos</td>
+              <td class="p-4 bg-cyan-950/20 font-bold text-cyan-300 border-x border-cyan-500/20">Disquetes removíveis de 5.25" / 3.5"</td>
+              <td class="p-4">Pendrives, SSDs e Armazenamento na Nuvem</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CURIOSIDADES INTERATIVAS -->
+  <section id="curiosidades" class="py-20 bg-gray-950 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-xs text-cyan-400 font-mono font-semibold tracking-widest uppercase mb-2">08. Fatos Surpreendentes</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white">Curiosidades do Período</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto mt-2 text-sm">Clique no botão abaixo para gerar fatos históricos incríveis sobre a 4ª Geração.</p>
+      </div>
+
+      <div class="max-w-2xl mx-auto text-center">
+        <div id="curiosity-box" class="bg-gray-900 p-8 rounded-2xl border border-amber-500/30 shadow-xl mb-8 min-h-[160px] flex items-center justify-center">
+          <p id="curiosity-text" class="text-lg text-amber-200 font-serif italic">
+            "O famoso microprocessador Intel 4004 foi projetado originalmente para calcular operações de uma calculadora de mesa japonesa chamada Busicom, e não para um computador!"
+          </p>
+        </div>
+        <button id="next-curiosity-btn" class="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold font-mono transition-all flex items-center gap-2 mx-auto">
+          <i class="fas fa-random"></i> Sortear Outra Curiosidade
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ INTERATIVO (RECURSO INTERATIVO OBRIGATÓRIO) -->
+  <section id="quiz" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gray-900 p-8 rounded-3xl border border-cyan-500/40 shadow-2xl">
+        <div class="text-center mb-8">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-mono text-xs border border-amber-500/30">Desafio de Fixação</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2">Quiz da 4ª Geração</h3>
+          <p class="text-gray-400 text-xs sm:text-sm mt-1">Teste seus conhecimentos com as perguntas abaixo antes de finalizar o trabalho!</p>
+        </div>
+
+        <div id="quiz-container" class="space-y-6">
+          <!-- Pergunta 1 -->
+          <div class="quiz-question bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <p class="font-semibold text-white mb-3 text-sm">1. Qual foi o primeiro microprocessador comercial em um único chip de silício?</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q1" value="a" class="text-cyan-500">
+                <span>a) Zilog Z80</span>
+              </label>
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q1" value="b" class="text-cyan-500">
+                <span>b) Intel 4004</span>
+              </label>
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q1" value="c" class="text-cyan-500">
+                <span>c) Motorola 68000</span>
+              </label>
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q1" value="d" class="text-cyan-500">
+                <span>d) MOS 6502</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="quiz-question bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <p class="font-semibold text-white mb-3 text-sm">2. Qual tecnologia principal define a Quarta Geração de Computadores?</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q2" value="a" class="text-cyan-500">
+                <span>a) Válvulas Eletrônicas</span>
+              </label>
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q2" value="b" class="text-cyan-500">
+                <span>b) Transistores Individuais</span>
+              </label>
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q2" value="c" class="text-cyan-500">
+                <span>c) Integrados VLSI (Microprocessadores)</span>
+              </label>
+              <label class="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer flex items-center gap-2 border border-gray-700">
+                <input type="radio" name="q2" value="d" class="text-cyan-500">
+                <span>d) Inteligência Artificial e Biocomputação</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="quiz-result" class="hidden mt-6 p-4 rounded-xl bg-cyan-950 border border-cyan-500 text-center font-mono">
+          <!-- Resultado do Quiz via JS -->
+        </div>
+
+        <div class="mt-8 text-center">
+          <button id="submit-quiz-btn" class="px-8 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold font-mono transition-all">
+            Verificar Respostas
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA PARA GITHUB PAGES -->
+  <section class="py-16 bg-gray-950 border-t border-gray-900 font-mono text-xs text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-amber-400 font-bold mb-2"><i class="fab fa-github text-base mr-1"></i> Publicação & Hospedagem</p>
+      <p class="max-w-2xl mx-auto">
+        Este projeto foi desenvolvido com arquitetura modular limpa e pronta para ser hospedada diretamente no <strong class="text-white">GitHub Pages</strong>, contento os três arquivos separados: <code class="text-cyan-400">index.html</code>, <code class="text-cyan-400">style.css</code> e <code class="text-cyan-400">script.js</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- 9. REFERÊNCIAS (ATUALIZADAS E TESTADAS) -->
+  <footer id="referencias" class="py-12 bg-black border-t border-gray-900 text-xs font-mono text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-sm">09. Referências Bibliográficas & Links</h4>
+          <ul class="space-y-2">
+            <li>
+              • <a href="https://www.computerhistory.org/revolution/personal-computers/17/301" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                Computer History Museum — The IBM PC & Personal Computers <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+              </a>
+            </li>
+            <li>
+              • <a href="https://www.4004.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                Intel 4004 Project — Recovered, Rebuilt, Remembered <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+              </a>
+            </li>
+            <li>
+              • <a href="https://www.computinghistory.org.uk/det/920/ibm/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                The Centre for Computing History — IBM Personal Computer <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+              </a>
+            </li>
+            <li>
+              • <a href="https://ethw.org/IEEE_Computer_Society_History" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                ETHW — IEEE Computer Society Official History <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+              </a>
+            </li>
+            <li>
+              • <a href="https://americanhistory.si.edu/collections/nmah_713495" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                Smithsonian National Museum — Intel 4004 Microprocessor Collection <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-sm">Créditos de Mídia & Direitos</h4>
+          <p class="leading-relaxed mb-3">
+            Imagens ilustrativas obtidas via 
+            <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">Unsplash</a> e 
+            <a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">Wikimedia Commons</a> 
+            sob licenças educacionais e Domínio Público.
+          </p>
+          <p class="leading-relaxed">
+            Desenvolvido como projeto para o trabalho acadêmico sobre Gerações da Computação.
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-900 pt-6 text-center text-gray-600">
+        &copy; Trabalho Escolar/Acadêmico — Quarta Geração da Computação.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
