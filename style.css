@@ -20,7 +20,7 @@
   background: #06B6D4;
 }
 
-/* Line clamp fallback */
+/* Line clamp sem aviso de CSS Linter */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
