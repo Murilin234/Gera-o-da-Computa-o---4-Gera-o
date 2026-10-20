@@ -1,56 +1,35 @@
 // Base de Dados dos Equipamentos para o Modal Interativo
 const techData = {
-  altair: {
-    title: "Altair 8800 (1975)",
-    subtitle: "MITS - Micro Instrumentation and Telemetry Systems",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
-    desc: "O Altair 8800 é amplamente considerado o catalisador da revolução dos microcomputadores pessoais. Ele utilizava a CPU Intel 8080 de 8 bits rodando a 2 MHz e vinha com apenas 256 bytes de memória RAM na sua configuração base.",
-    specs: ["Processador: Intel 8080 @ 2 MHz", "Memória: 256 Bytes (expansível a 64KB)", "Entrada: Chaves no painel frontal", "Saída: Luzes LED (sem monitor inicial)"]
-  },
-  apple2: {
-    title: "Apple II (1977)",
-    subtitle: "Apple Computer Inc.",
-    img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
-    desc: "Projetado por Steve Wozniak, o Apple II foi um dos primeiros computadores pessoais comercializados em massa com enorme sucesso. Vinha com gabinete plástico integrado, teclado, suporte a gráficos coloridos e linguagem BASIC embutida.",
-    specs: ["Processador: MOS Technology 6502 @ 1.023 MHz", "Memória: 4 KB até 64 KB RAM", "Gráficos: NTSC Colorido (280x192)", "Armazenamento: Fita Cassete / Floppy Disk 5.25\""]
-  },
-  ibmpc: {
-    title: "IBM PC - Modelo 5150 (1981)",
-    subtitle: "International Business Machines",
+  pc5150: {
+    title: "PC 5150 (1981)",
+    subtitle: "IBM - Nova York",
     img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
-    desc: "O lançamento do IBM PC definiu a arquitetura dos computadores pessoais corporativos até os dias de hoje. Ele popularizou o uso do sistema operacional MS-DOS da Microsoft e estabeleceu o padrão de mercado 'IBM-Compatível'.",
-    specs: ["Processador: Intel 8088 @ 4.77 MHz", "Memória: 16 KB a 256 KB RAM", "Sistema Operacional: PC-DOS / MS-DOS 1.0", "Slots de Expansão: Bus ISA de 8 bits"]
+    desc: "A IBM anuncia em Nova York o lançamento do pc 5150, antecessor de todos os micros que hoje dominam o mercado mundial.",
+    specs: ["Memória: 64 quilobytes", "Velocidade: 4,77 megahertz", "Sistemas: MS DOS / PC DOS"]
   },
-  macintosh: {
-    title: "Apple Macintosh 128K (1984)",
-    subtitle: "Apple Computer Inc.",
-    img: "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=600&q=80",
-    desc: "O Macintosh revolucionou a indústria ao trazer uma Interface Gráfica baseada em janelas e metáforas de 'área de trabalho' para o grande público, aliada ao uso do mouse de botão único.",
-    specs: ["Processador: Motorola 68000 @ 7.83 MHz", "Memória: 128 KB RAM", "Tela: Integrada de 9\" P&B (512x342)", "Interface: GUI WYSIWYG com Mouse"]
+  alphadec: {
+    title: "Alpha DEC (1992)",
+    subtitle: "Digital Equipment Corporation",
+    img: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
+    desc: "A DEC criou o revolucionário Alpha, uma máquina de 64 bits com arquitetura verdadeiramente RISC - conjunto reduzido de instruções com a finalidade de agilizar o processamento.",
+    specs: ["Arquitetura: RISC 64-bit", "Objetivo: Agilizar o processamento", "Evolução: Superou as máquinas de 8, 16 e 32 bits"]
   },
-  mouse: {
-    title: "O Mouse e Interfaces Gráficas",
-    subtitle: "Pioneirismo Xerox PARC & Apple",
-    img: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
-    desc: "Apesar de inventado por Douglas Engelbart nos anos 60, foi no laboratório Xerox PARC nos anos 70 que o mouse foi integrado às telas WIMP (Windows, Icons, Menus, Pointer), sendo comercializado com sucesso no Macintosh.",
-    specs: ["Tipo: Mecânico (esfera interna)", "Conexão: Serial / Proprietária", "Inovação: Apontar e Clicar sem comandos texto", "Uso: Navegação gráfica em área de trabalho"]
-  },
-  floppy: {
-    title: "Disquetes (Floppy Disks)",
-    subtitle: "IBM & Shugart Associates",
-    img: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=600&q=80",
-    desc: "Os disquetes magnéticos flexíveis de 5.25 polegadas e posteriormente de 3.5 polegadas (envoltos em plástico rígido) foram os suportes universais para a distribuição de programas, jogos e arquivos na 4ª Geração.",
-    specs: ["Formatos Comuns: 8\", 5.25\" e 3.5\"", "Capacidade: 360 KB até 1.44 MB", "Tipo: Armazenamento Magnético Removível", "Ícone Histórico: Virou o símbolo universal de 'Salvar'"]
+  pentium: {
+    title: "Processador Pentium (1993)",
+    subtitle: "Intel Corporation",
+    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+    desc: "Processador Pentium da Intel com alta capacidade de processamento para micros pessoais.",
+    specs: ["Transistores: 3,1 milhões", "Velocidade: 66 megahertz", "Fabricante: Intel"]
   }
 };
 
-// Lista de Curiosidades para Sorteio
+// Lista de Curiosidades dos Prints
 const curiosities = [
-  "O famoso microprocessador Intel 4004 foi projetado originalmente para calcular operações de uma calculadora de mesa japonesa chamada Busicom, e não para um computador!",
-  "A Microsoft (fundada por Bill Gates e Paul Allen em 1975) começou seu império escrevendo um interpretador da linguagem BASIC para o computador Altair 8800.",
-  "Steve Wozniak vendeu sua calculadora científica HP e Steve Jobs vendeu sua Kombi Volkswagen para conseguir o capital inicial de $1.300 dólares para montar a Apple.",
-  "O famoso comercial de lançamento do Apple Macintosh (1984) foi dirigido por Ridley Scott (diretor de Alien e Blade Runner) e transmitido durante o Super Bowl XVIII.",
-  "A expressão 'Computador Pessoal' (PC) já existia antes, mas consagrou-se mundialmente após a revista TIME nomear o 'PC' como a 'Pessoa do Ano' em 1982."
+  "Em 1989, Tim Berners-Lee criou o Lynx, o primeiro browser para leitura de hipertexto na WWW que não exibia nenhuma imagem!",
+  "A Microsoft vendeu 1 milhão de cópias do Windows em apenas dois anos após o lançamento em 1985.",
+  "O finlandês Linus Torvalds liberou totalmente o código-fonte do Linux em 1991 para que qualquer programador pudesse modificá-lo.",
+  "Até 1992 os computadores pessoais eram de no máximo 32 bits, até a chegada do Alpha DEC de 64 bits.",
+  "O NCSA Mosaic (1993) foi o primeiro programa de navegação capaz de exibir imagens integradas no texto."
 ];
 
 // Funções do Modal
@@ -82,29 +61,9 @@ function closeModal() {
   document.getElementById('tech-modal').classList.add('hidden');
 }
 
-// Troca de Abas em Linguagens/Software
-function switchTab(tab) {
-  const langTab = document.getElementById('tab-lang');
-  const soTab = document.getElementById('tab-so');
-  const langBtn = document.getElementById('tab-lang-btn');
-  const soBtn = document.getElementById('tab-so-btn');
-
-  if (tab === 'lang') {
-    langTab.classList.remove('hidden');
-    soTab.classList.add('hidden');
-    langBtn.className = "text-cyan-400 border-b-2 border-cyan-400 pb-2 font-bold focus:outline-none";
-    soBtn.className = "text-gray-400 hover:text-white pb-2 font-bold focus:outline-none";
-  } else {
-    langTab.classList.add('hidden');
-    soTab.classList.remove('hidden');
-    soBtn.className = "text-cyan-400 border-b-2 border-cyan-400 pb-2 font-bold focus:outline-none";
-    langBtn.className = "text-gray-400 hover:text-white pb-2 font-bold focus:outline-none";
-  }
-}
-
-// Eventos Globais e Inicialização
+// Inicialização dos Eventos
 document.addEventListener('DOMContentLoaded', () => {
-  // Menu Mobile Toggle
+  // Toggle Menu Mobile
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -113,31 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Fechar ao clicar num link
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
   }
-
-  // Filtros da Galeria de Computadores
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.equip-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.className = "filter-btn px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700");
-      btn.className = "filter-btn active px-4 py-2 rounded-full bg-cyan-500 text-black font-bold";
-
-      const filter = btn.dataset.filter;
-      cards.forEach(card => {
-        if (filter === 'all' || card.classList.contains(filter)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
 
   // Gerador de Curiosidades
   const curBtn = document.getElementById('next-curiosity-btn');
@@ -150,34 +88,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Quiz Interativo
+  // Lógica do Quiz Interativo Ampliado (10 Perguntas)
   const submitQuizBtn = document.getElementById('submit-quiz-btn');
   const quizResult = document.getElementById('quiz-result');
 
   if (submitQuizBtn) {
     submitQuizBtn.addEventListener('click', () => {
-      const q1 = document.querySelector('input[name="q1"]:checked');
-      const q2 = document.querySelector('input[name="q2"]:checked');
+      // Gabarito correto das 10 questões
+      const correctAnswers = {
+        q1: 'b', // 4,77 MHz
+        q2: 'a', // Circuitos Integrados em Larga Escala de Integração
+        q3: 'b', // Bjarne Stroustrup
+        q4: 'b', // Licença GPL / Software Livre
+        q5: 'b', // Lynx
+        q6: 'a', // Linus Torvalds
+        q7: 'b', // 64 bits RISC
+        q8: 'b', // 3,1 milhões de transistores
+        q9: 'a', // Exibir imagens junto com textos
+        q10: 'b' // Multimídia e CD-ROM
+      };
 
-      if (!q1 || !q2) {
-        alert("Por favor, responda a todas as perguntas do Quiz!");
+      let score = 0;
+      let totalQuestions = 10;
+      let unanswered = false;
+
+      for (let i = 1; i <= totalQuestions; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!selected) {
+          unanswered = true;
+          break;
+        }
+        if (selected.value === correctAnswers[`q${i}`]) {
+          score++;
+        }
+      }
+
+      if (unanswered) {
+        alert("Por favor, responda a todas as 10 perguntas antes de verificar o resultado!");
         return;
       }
 
-      let score = 0;
-      if (q1.value === 'b') score++; // Intel 4004
-      if (q2.value === 'c') score++; // VLSI / Microprocessadores
-
       quizResult.classList.remove('hidden');
-      if (score === 2) {
+      const percentage = Math.round((score / totalQuestions) * 100);
+
+      if (score >= 8) {
         quizResult.innerHTML = `
-          <p class="text-green-400 font-bold text-base mb-1"><i class="fas fa-check-circle"></i> Parabéns! Você acertou 2 de 2 perguntas!</p>
-          <p class="text-xs text-gray-300">Você compreendeu perfeitamente os conceitos da 4ª Geração da Computação.</p>
+          <p class="text-green-400 font-bold text-lg mb-1"><i class="fas fa-trophy"></i> Excelente! Você acertou ${score} de 10 perguntas (${percentage}%)!</p>
+          <p class="text-xs text-gray-300">Você dominou perfeitamente todos os conceitos e acontecimentos da Quarta Geração da Computação.</p>
+        `;
+      } else if (score >= 5) {
+        quizResult.innerHTML = `
+          <p class="text-amber-400 font-bold text-lg mb-1"><i class="fas fa-check-circle"></i> Bom trabalho! Você acertou ${score} de 10 perguntas (${percentage}%).</p>
+          <p class="text-xs text-gray-300">Você tem um bom conhecimento geral, mas pode revisar a linha do tempo para gabaritar!</p>
         `;
       } else {
         quizResult.innerHTML = `
-          <p class="text-amber-400 font-bold text-base mb-1"><i class="fas fa-exclamation-circle"></i> Você acertou ${score} de 2 perguntas.</p>
-          <p class="text-xs text-gray-300">Dica: O Intel 4004 foi a primeira CPU num único chip e a tecnologia marcante é a integração VLSI!</p>
+          <p class="text-red-400 font-bold text-lg mb-1"><i class="fas fa-exclamation-triangle"></i> Você acertou ${score} de 10 perguntas (${percentage}%).</p>
+          <p class="text-xs text-gray-300">Recomendamos ler novamente os tópicos da Linha do Tempo e tentar o quiz mais uma vez!</p>
         `;
       }
     });
